@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
       foundNum++;
     }
   }
-  printf("%ld\n", foundNum);
+  printf("%ld primes\n", foundNum);
 
   return 0;
 }
