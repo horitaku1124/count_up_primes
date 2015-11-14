@@ -12,19 +12,7 @@ type LinkNode struct {
     next *LinkNode
 }
 
-func printAllNodes(start *LinkNode) {
-  current := start
-  for {
-    if current.next == nil {
-      break
-    } else {
-      fmt.Printf("%d\n", current.value)
-      current = current.next
-    }
-  }
-}
-
-func countAllNodes(start *LinkNode) int{
+func CountAllNodes(start *LinkNode) int{
   num := 0
   current := start;
   for {
@@ -36,17 +24,6 @@ func countAllNodes(start *LinkNode) int{
     }
   }
   return num
-}
-
-func freeAllNodes(start *LinkNode) {
-  current := start
-  for {
-    if current.next == nil {
-      break
-    } else {
-      current = current.next
-    }
-  }
 }
 
 // 2 3 5 7....
@@ -102,7 +79,5 @@ func main() {
     }
     current = current.next
   }
-  fmt.Printf("%d primes\n", countAllNodes(start))
-
-  freeAllNodes(start)
+  fmt.Printf("%d primes\n", CountAllNodes(start))
 }
